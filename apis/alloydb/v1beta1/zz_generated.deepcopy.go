@@ -132,6 +132,11 @@ func (in *AlloyDBClusterSpec) DeepCopyInto(out *AlloyDBClusterSpec) {
 		*out = new(refsv1beta1.ProjectRef)
 		**out = **in
 	}
+	if in.PSCConfig != nil {
+		in, out := &in.PSCConfig, &out.PSCConfig
+		*out = new(Cluster_PSCConfig)
+		(*in).DeepCopyInto(*out)
+	}
 	if in.RestoreBackupSource != nil {
 		in, out := &in.RestoreBackupSource, &out.RestoreBackupSource
 		*out = new(BackupSource)

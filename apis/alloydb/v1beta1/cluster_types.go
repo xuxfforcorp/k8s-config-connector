@@ -53,7 +53,7 @@ type AlloyDBClusterSpec struct {
 
 	// Optional. Whether to enable Private Service Connect for the cluster.
 	// +kcc:proto:field=google.cloud.alloydb.v1beta.Cluster.PscConfig
-	PscConfig *Cluster_PSCConfig `json:"pscConfig,omitempty"`
+	PSCConfig *Cluster_PSCConfig `json:"pscConfig,omitempty"`
 
 	// Immutable. The source when restoring from a backup. Conflicts
 	// with 'restoreContinuousBackupSource', both can't be set together.
